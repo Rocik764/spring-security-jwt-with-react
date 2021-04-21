@@ -29,6 +29,7 @@ These two endpoints need to be authorized with not expired, valid token.
 * **GET:** api/profile - returns logged in user's profile info
 
 ## Database structure
+#### User table
 | id  | Email | Password | Roles |
 | --- |:-----:| --------:|------:|
 | 1   |test@mail.com|#hashed|USER|
