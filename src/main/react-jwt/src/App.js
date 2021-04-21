@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './App.css';
 import AuthService from './services/Auth'
 import "bootstrap/dist/css/bootstrap.min.css"
-import {Container, Nav, Navbar} from "react-bootstrap";
+import {Col, Container, Nav, Navbar, Row} from "react-bootstrap";
 import {Link, Route, Switch} from "react-router-dom";
 import Home from "./components/home_page/Home";
 import Login from "./components/auth/Login";
@@ -77,15 +77,20 @@ class App extends Component {
               </Navbar.Collapse>
             </Container>
           </Navbar>
-          <div className="container mt-3">
-            <Switch>
-              <Route exact path={["/", "/home"]} component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
-              <Route exact path="/profile" component={UserProfile} />
-              <Route path="/users" component={UsersList} />
-            </Switch>
-          </div>
+
+          <Container>
+            <Row className="pt-5">
+              <Col>
+                <Switch>
+                  <Route exact path={["/", "/home"]} component={Home} />
+                  <Route exact path="/login" component={Login} />
+                  <Route exact path="/register" component={Register} />
+                  <Route exact path="/profile" component={UserProfile} />
+                  <Route path="/users" component={UsersList} />
+                </Switch>
+              </Col>
+            </Row>
+          </Container>
         </>
     );
   }

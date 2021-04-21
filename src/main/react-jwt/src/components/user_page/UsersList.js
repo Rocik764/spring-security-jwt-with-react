@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import UserService from "../../services/User";
-import {Container, Table} from "react-bootstrap";
+import {Card, Table} from "react-bootstrap";
 
 export default class UsersList extends Component {
 
@@ -48,24 +48,26 @@ export default class UsersList extends Component {
 
 
         return (
-            <Container>
+            <>
                 {this.state.error ? (
                     <h3>{this.state.content.status}</h3>
                 ) : (
-                    <Table responsive="sm">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Email</th>
-                            <th>Roles</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            {users}
-                        </tbody>
-                    </Table>
+                    <Card>
+                        <Table responsive="sm">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>Roles</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {users}
+                            </tbody>
+                        </Table>
+                    </Card>
                 )}
-            </Container>
+            </>
         )
     }
 }
