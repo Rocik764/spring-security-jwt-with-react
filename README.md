@@ -1,11 +1,31 @@
 # Spring Boot with React - JWT Authentication
 
+## Table of contents
+* [About project](#about-project)
+* [Technologies](#technologies)
+* [Used dependencies](#used-dependencies)
+* [Endpoints](#endpoints)
+* [Database structure](#database-structure)
+* [Example screenshots](#example-screenshots)
+
 ## About project
 My fullstack project in which I've used Spring Security using JWT based, stateless authentication.
 Users can register, login, check their profile and check all users list. All users are stored in mysql 
 database, in User table.
 As a frontend, I've used React with react router and Bootstrap for responsiveness.
 Check application.properties file for database connection.
+
+## Technologies
+* Spring Boot
+* Bootstrap 4
+* React
+* API
+* REST
+* JWT
+* Java 11
+* JavaScript
+* MySQL
+* HTML & CSS
 
 ## Used dependencies
 * spring-boot-starter-web
@@ -29,17 +49,18 @@ These two endpoints need to be authorized with not expired, valid token.
 * **GET:** api/profile - returns logged in user's profile info
 
 ## Database structure
-#### User table
+#### User
 | id  | Email | Password | Roles |
 | --- |:-----:| --------:|------:|
-| 1   |test@mail.com|#hashed|USER|
+|integer|varchar(255)|varchar(255)|varchar(50)|
 
 [home]: ./readme_images/home.JPG "Home page screenshot"
 [login_register]: ./readme_images/login.JPG "Login/Register page screenshot"
 [profile]: readme_images/profile.JPG "Profile page screenshot"
 [users_list]: readme_images/users_list.JPG "Home page screenshot"
 
-## Example screenshots in case anyone wants to see it without downloading
+## Example screenshots
+(in case anyone wants to see it without downloading)
 ### Before logging in
 ##### Home page
 ![alt text][home]
